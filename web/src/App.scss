@@ -1,0 +1,15 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* root font size (rem) */
+html {
+  // define the size of 1rem
+  font-size: 62.5%; /* 16px default changed to 10px (10px = 1rem)*/
+}
+
+body {
+  box-sizing: border-box;
+}

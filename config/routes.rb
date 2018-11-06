@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   
   devise_for :users, path_prefix: 'api', defaults: { format: :json }
   namespace :api, defaults: { format: :json } do
-    
     namespace :v1 do
     
     end
