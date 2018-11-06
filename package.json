@@ -1,0 +1,11 @@
+{
+  "name": "base_rails_api_with_react",
+  "engines": {
+    "node": "10.9.0"
+  },
+  "scripts": {
+    "build": "cd web && npm install && npm run build && cd ..",
+    "deploy": "cp -a web/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Web Client built!'"
+  }
+}
