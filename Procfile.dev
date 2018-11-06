@@ -1,2 +1,2 @@
-web: cd web && PORT=3000 yarn start
+web: cd web && PORT=3000 npm run start
 api: bundle exec rails s -p 3001
