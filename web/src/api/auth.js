@@ -1,9 +1,17 @@
 import axios from 'axios'
-import api, { setHeaders } from './init'
 import { rememberToken, getDecodedToken, getValidToken } from './token'
 
 function extractToken(res) {
   return res.headers.authorization.split(' ')[1]
+}
+
+export function setHeaders(token) {
+  if (token) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
+  }
+  else {
+    delete axios.defaults.headers.common['Authorization']
+  }
 }
 
 export function signIn(data) {
